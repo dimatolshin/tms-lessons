@@ -60,12 +60,12 @@ class Controller:
             if user == 0:
                 print("До свидания")
                 break
-            if user == 1:
+            elif user == 1:
                 print("Введите имя и фамилию")
                 card_holder = input()
                 user_1=self.bank.open_account(card_holder)
-                print("Счёт", user_1.card_number, "создан")
-            if user ==2:
+                print("Счёт", user_1.account_number, "создан")
+            elif user ==2:
                 print('Ваши открытые счета:')
                 for account_number, account in self.bank.bank_accounts.items():
                     print(f'Cчёт: {account_number}')
