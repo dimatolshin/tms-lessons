@@ -26,10 +26,9 @@ class acaunt:
             for phone in total.fetchall():
                 print(phone)
 
-    def update_cont(self, name, number):
-        user = (name, number)
+    def update_cont(self,name,new_number):
         with sqlite3.connect('telefon.db') as connection:
-            connection.execute('update telefon set number = ? where name = ?', user)
+            connection.execute('update telefon set number = ? where name = ?', (new_number,name))
 
 
 class Controller:
