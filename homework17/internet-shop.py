@@ -48,7 +48,7 @@ def category_of_produtc(category_idd:int) -> Product:
             storage.append(element)
         return storage
 
-print(category_of_produtc(3))
+
 def join_config()->list[Category]:
     storage = []
     with sqlite3.connect("internet-shop.db") as connection:
@@ -153,6 +153,7 @@ def generate_html_list():
             <title> Favorite Products </title>
         </head
         <body>
+            <a href="/products"> Main page</a>
             <h1> Favorite Products: </h1>
             <ul>
                 {products_html}
