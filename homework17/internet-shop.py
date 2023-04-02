@@ -5,7 +5,7 @@ from flask_session import Session
 import sqlite3
 
 
-star=''
+
 @dataclass
 class Product:
     id: int
@@ -119,7 +119,6 @@ def list_of_product(product_id: int):
             <h1> Name:{product.name} {star} </h1>
             <h2> Description:{product.description} </h2>
             <h3> Category:{product.category} </h3>
-            <h3> {count_favorites_products}
             <form method="post" action="/product/favorites_products">
                 <input type="hidden" name="products_id" value="{product.id}"/>
                 <input type="submit" value="Add favorites products "/>
